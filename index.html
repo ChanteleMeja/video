@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>WATCH VIDEOS</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .wrapper {
+      width: 100%;
+      max-width: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    .ad-banner {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    .container {
+      width: 100%;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .download-btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background-color: #24292e;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    .download-btn:hover {
+      background-color: #000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <!-- ADS -->
+    <div class="ad-banner">
+      <script type="text/javascript">
+        atOptions = {
+          'key' : 'ce06c1a40e190053654db463c3572bc4',
+          'format' : 'iframe',
+          'height' : 50,
+          'width' : 320,
+          'params' : {}
+        };
+      </script>
+      <script type="text/javascript"
+        src="//laxativethem.com/ce06c1a40e190053654db463c3572bc4/invoke.js">
+      </script>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="container">
+      <a id="videoLink" class="download-btn" href="#" target="_blank">
+        ▶︎ WATCH VIDEO
+      </a>
+    </div>
+
+  </div>
+
+  <!-- SCRIPT OTOMATIS ID -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id") || "idvideoembed";
+
+    const videoUrl = `https://cozy-lamington-aa2988.netlify.app/?id=${id}`;
+
+    document.title = `${id}.mp4`;
+    document.getElementById("videoLink").href = videoUrl;
+  </script>
+
+</body>
+</html>
